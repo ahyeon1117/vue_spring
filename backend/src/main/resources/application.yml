@@ -1,1 +1,26 @@
+server:
+  port: 1117
 
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    show-sql: true
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    url: jdbc:postgresql://localhost:5430/dslms
+    username: dslms
+    password: dslms1234!
+    initialization-mode: always
+    continue-on-error: true
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
