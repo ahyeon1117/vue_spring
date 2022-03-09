@@ -15,12 +15,15 @@ spring:
     hikari:
       connectionTimeout: 20000
       maximumPoolSize: 5
-    url: jdbc:postgresql://localhost:5430/dslms
-    username: dslms
-    password: dslms1234!
+    url: jdbc:postgresql://localhost:5431/profile
+    username: profile
+    password: profile123!
     initialization-mode: always
     continue-on-error: true
   sql:
     init:
       mode: always
       continue-on-error: true
+
+profile-project:
+  profile-image: C:\project\image\
