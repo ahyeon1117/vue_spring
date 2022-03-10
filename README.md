@@ -17,6 +17,11 @@
 ## Vue
 ```vue.js
 component 기반의 프레임 워크 구조를 잘 짜봅시다.
+vuex
+babel
+vue router
+vue-apollo graphql
+markDown 사용 가능한 웹 페이지 만들 것임
 
 사용자 관리 페이지 개발
 레이아웃 선택 페이지 개발
