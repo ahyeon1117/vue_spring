@@ -15,9 +15,9 @@ spring:
     hikari:
       connectionTimeout: 20000
       maximumPoolSize: 5
-    url: jdbc:postgresql://localhost:5431/profile
-    username: profile
-    password: profile123!
+    url: jdbc:postgresql://localhost:5431/postgres
+    username: postgres
+    password: post123!
     initialization-mode: always
     continue-on-error: true
   sql:

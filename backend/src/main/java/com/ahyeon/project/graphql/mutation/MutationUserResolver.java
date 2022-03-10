@@ -1,7 +1,6 @@
 package com.ahyeon.project.graphql.mutation;
 
 import com.ahyeon.project.dto.UserDto;
-import com.ahyeon.project.enums.ProcessResult;
 import com.ahyeon.project.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
@@ -15,8 +14,6 @@ public class MutationUserResolver {
 
   @MutationMapping
   public String registerUser(UserDto userDto) {
-    ProcessResult result = ProcessResult.FAIL;
-    result = userService.register(userDto);
-    return result.toString();
+    return userService.register(userDto).toString();
   }
 }

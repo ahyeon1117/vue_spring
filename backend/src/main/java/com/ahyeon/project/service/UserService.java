@@ -15,23 +15,25 @@ public class UserService {
   private UserRepository userRepository;
 
   public ProcessResult register(UserDto userDto) {
-    User user = new User();
-    user
-      .builder()
-      .id(userDto.getId())
-      .name(userDto.getName())
-      .password(userDto.getPassword())
-      .age(userDto.getAge())
-      .email(userDto.getEmail())
-      .address(userDto.getAddress())
-      .contents(userDto.getContents())
-      .phoneNumber(userDto.getPhoneNumber())
-      .authority(AuthorityEnum.USER)
-      .build();
+    try {
+      User user = User
+        .builder()
+        .id(userDto.getId())
+        .name(userDto.getName())
+        .password(userDto.getPassword())
+        .age(userDto.getAge())
+        .email(userDto.getEmail())
+        .address(userDto.getAddress())
+        .contents(userDto.getContents())
+        .phoneNumber(userDto.getPhoneNumber())
+        .authority(AuthorityEnum.USER)
+        .build();
 
-    userRepository.save(user);
-    ProcessResult result = ProcessResult.FAIL;
-    result = ProcessResult.SUCCESS;
-    return result;
+      userRepository.save(user);
+      return ProcessResult.SUCCESS;
+    } catch (Exception e) {
+      e.printStackTrace();
+      return ProcessResult.FAIL;
+    }
   }
 }

@@ -2,16 +2,14 @@ version: "3.1"
 
 services:
   postgres:
-    image: postgres
+    image: 'postgres:latest'
     restart: always
     container_name: profile_postgres
-    hostname: profile_postgres
+    hostname: postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: post123!
-      NEW_DB_USER: profile
-      NEW_DB_PASSWORD: profile123!
-      NEW_DB_DATABASE: profile
+      POSTGRES_DB: postgres
     volumes:
       - profile-volume:/var/lib/postgresql/data
     ports:
@@ -23,4 +21,4 @@ volumes:
 networks:
   default:
     external:
-      name: local-docker-bridge
+      name: docker-bridge
