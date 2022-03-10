@@ -35,6 +35,7 @@ export default {
   methods: {
     login() {
       console.log("login");
+      this.$router.push(this.$route.query.redirect || "/mainPage");
     }
   }
 };
