@@ -1,24 +1,16 @@
-package com.ahyeon.project.entity;
+package com.ahyeon.project.dto;
 
-import com.ahyeon.project.enums.AuthorityEnum;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserDto {
 
-  @Id
   private String id;
 
   private String name;
@@ -27,7 +19,6 @@ public class User {
 
   private String password;
 
-  @Column(columnDefinition = "TEXT")
   private String contents;
 
   private String tag;
@@ -37,7 +28,4 @@ public class User {
   private String phoneNumber;
 
   private Integer age;
-
-  @Enumerated(EnumType.STRING)
-  private AuthorityEnum authority;
 }
