@@ -3,6 +3,30 @@
 
 *작업은 Vue & Spring으로 진행할 예정이다.*
 
+### DB -> Postgresql
+```
+User Data Model
+id 계정 String -> varchar()
+
+name 닉네임 String -> varchar()
+
+password 비밀번호 String -> varchar();
+
+address 집 주소 String -> varchar();
+
+email 메일 String -> varchar()
+
+phoneNumber 폰번호 String -> varchar()
+
+age 나이 integer -> int
+
+authority 권한 enum -> varchar()
+
+craeteAt 만들어진시간 LocalDateTime -> timestamp
+
+saveAt User의 정보를 수정한시간 LocalDateTime -> timestamp
+```
+
 ## Content
 ```
 1.로그인함 계정이 없는 경우 회원가입.
