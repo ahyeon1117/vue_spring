@@ -1,6 +1,9 @@
 spring:
   application:
-    name: demo
+    name: blog
+  jpa:
+    hibernate:
+      ddl-auto: create
   datasource:
     hikari:
       connectionTimeout: 20000
