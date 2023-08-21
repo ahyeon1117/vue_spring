@@ -2,6 +2,8 @@ package com.hyeon.blog.entity;
 
 import com.hyeon.blog.enums.GenderEnums;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
@@ -20,7 +22,10 @@ public class BlogUser {
   private String email;
   private String password;
   private String phone;
+
+  @Enumerated(value = EnumType.STRING)
   private GenderEnums gender;
+
   private LocalDate birth;
   private String name;
   private String nickname;
